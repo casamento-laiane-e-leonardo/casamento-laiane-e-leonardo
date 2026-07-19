@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -22,6 +23,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 min-height:100vh;
+flex-direction:column;
 overflow:hidden;
 
 }
@@ -30,32 +32,48 @@ overflow:hidden;
 
 width:340px;
 cursor:pointer;
+animation:flutuar 3s infinite ease-in-out;
 transition:.8s;
 
 }
+
+@keyframes flutuar{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+}
+
 
 #convite{
 
 display:none;
 max-width:95%;
-max-height:95vh;
+max-height:75vh;
 box-shadow:0 15px 40px rgba(0,0,0,.35);
 border-radius:10px;
 
 }
 
+
 .fade{
 
-animation:fade 1s;
+animation:abrir 1.2s ease;
 
 }
 
-@keyframes fade{
+
+@keyframes abrir{
 
 from{
 
 opacity:0;
-transform:scale(.9);
+transform:scale(.85);
 
 }
 
@@ -68,25 +86,82 @@ transform:scale(1);
 
 }
 
+
+.botoes{
+
+display:none;
+margin-top:20px;
+gap:12px;
+flex-direction:column;
+align-items:center;
+
+}
+
+
+.botao{
+
+background:#0b4f3a;
+color:white;
+text-decoration:none;
+padding:12px 25px;
+border-radius:30px;
+font-size:16px;
+transition:.3s;
+
+}
+
+
+.botao:hover{
+
+transform:scale(1.05);
+
+}
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <img
 id="envelope"
 src="envelope.png"
 onclick="abrirConvite()">
 
+
+
 <img
 id="convite"
 src="convite.png">
 
+
+
+<div class="botoes" id="botoes">
+
+<a class="botao" target="_blank"
+href="https://www.google.com/maps/place/Paroquia+Menino+Jesus+de+Praga+e+Santa+Ifigenia+-+Diocese+de+Franca/@-20.5457374,-47.4117848">
+📍 Como chegar
+</a>
+
+
+<a class="botao" target="_blank"
+href="https://noivos.casar.com/laiane-e-leonardo-2026-11-07?utm_source=parceiros&utm_campaign=assessoria-vip&utm_medium=casais#/presentes">
+🎁 Lista de presentes
+</a>
+
+</div>
+
+
+
 <script>
+
 
 function abrirConvite(){
 
 document.getElementById("envelope").style.display="none";
+
 
 let convite=document.getElementById("convite");
 
@@ -94,10 +169,17 @@ convite.style.display="block";
 
 convite.classList.add("fade");
 
+
+document.getElementById("botoes").style.display="flex";
+
+
 }
 
+
 </script>
+
 
 </body>
 
 </html>
+```
