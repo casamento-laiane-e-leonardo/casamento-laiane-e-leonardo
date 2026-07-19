@@ -8,15 +8,22 @@
 
 <title>Laiane & Leonardo</title>
 
-  <meta property="og:title" content="Laiane & Leonardo | Convite de Casamento">
+<meta property="og:title" content="Laiane & Leonardo | Convite de Casamento">
 
-<meta property="og:description" content="Com alegria, compartilhamos com vocês o nosso convite de casamento. Clique no envelope para abrir. 💍✨">
+<meta property="og:description" content="Com muita alegria, compartilhamos com vocês o nosso convite de casamento. Clique no envelope para abrir e conferir todos os detalhes. 💍✨">
 
 <meta property="og:image" content="https://casamento-laiane-e-leonardo.github.io/casamento-laiane-e-leonardo/envelope.png">
+
+<meta property="og:image:type" content="image/png">
+
+<meta property="og:image:width" content="1200">
+
+<meta property="og:image:height" content="630">
 
 <meta property="og:url" content="https://casamento-laiane-e-leonardo.github.io/casamento-laiane-e-leonardo/">
 
 <meta property="og:type" content="website">
+
 
 <style>
 
@@ -25,6 +32,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
+
 
 body{
 
@@ -67,8 +75,9 @@ transform:translateY(-12px);
 #convite{
 
 display:none;
-width:100%;
-height:85vh;
+width:95%;
+max-width:500px;
+max-height:80vh;
 object-fit:contain;
 box-shadow:0 15px 40px rgba(0,0,0,.35);
 border-radius:10px;
@@ -148,11 +157,12 @@ src="convite.png">
 
 
 
-<a 
+<a
 class="botao"
 id="botaoLocal"
 target="_blank"
-href="https://www.google.com/maps/place/Paroquia+Menino+Jesus+de+Praga+e+Santa+Ifigenia+-+Diocese+de+Franca/@-20.5457374,-47.4143597,17z/data=!3m1!4b1!4m6!3m5!1s0x94b0a7d37daad993:0x33c5d339c62cd8d0!8m2!3d-20.5457374!4d-47.4117848"
+href="https://www.google.com/maps/place/Paroquia+Menino+Jesus+de+Praga+e+Santa+Ifigenia+-+Diocese+de+Franca/@-20.5457374,-47.4143597,17z/data=!3m1!4b1!4m6!3m5!1s0x94b0a7d37daad993:0x33c5d339c62cd8d0!8m2!3d-20.5457374!4d-47.4117848">
+
 📍 Local da cerimônia
 
 </a>
@@ -161,9 +171,7 @@ href="https://www.google.com/maps/place/Paroquia+Menino+Jesus+de+Praga+e+Santa+I
 
 <script>
 
-
 function abrirConvite(){
-
 
 document.getElementById("envelope").style.display="none";
 
@@ -179,7 +187,6 @@ document.getElementById("botaoLocal").style.display="block";
 
 
 }
-
 
 </script>
 
