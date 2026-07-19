@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Laiane & Leonardo</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#f5f2ec;
+font-family:Georgia, serif;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+
+}
+
+#envelope{
+
+width:340px;
+cursor:pointer;
+transition:.8s;
+
+}
+
+#convite{
+
+display:none;
+max-width:95%;
+max-height:95vh;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+border-radius:10px;
+
+}
+
+.fade{
+
+animation:fade 1s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<img
+id="envelope"
+src="envelope.png"
+onclick="abrirConvite()">
+
+<img
+id="convite"
+src="convite.png">
+
+<script>
+
+function abrirConvite(){
+
+document.getElementById("envelope").style.display="none";
+
+let convite=document.getElementById("convite");
+
+convite.style.display="block";
+
+convite.classList.add("fade");
+
+}
+
+</script>
+
+</body>
+
+</html>
