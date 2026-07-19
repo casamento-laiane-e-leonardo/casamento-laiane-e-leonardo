@@ -1,7 +1,8 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,6 +29,7 @@ overflow:hidden;
 
 }
 
+
 #envelope{
 
 width:340px;
@@ -36,6 +38,7 @@ animation:flutuar 3s infinite ease-in-out;
 transition:.8s;
 
 }
+
 
 @keyframes flutuar{
 
@@ -50,6 +53,7 @@ transform:translateY(-12px);
 }
 
 
+
 #convite{
 
 display:none;
@@ -61,11 +65,13 @@ border-radius:10px;
 }
 
 
+
 .fade{
 
 animation:abrir 1.2s ease;
 
 }
+
 
 
 @keyframes abrir{
@@ -87,25 +93,17 @@ transform:scale(1);
 }
 
 
-.botoes{
-
-display:none;
-margin-top:20px;
-gap:12px;
-flex-direction:column;
-align-items:center;
-
-}
-
 
 .botao{
 
+display:none;
+margin-top:20px;
 background:#0b4f3a;
 color:white;
 text-decoration:none;
-padding:12px 25px;
+padding:11px 24px;
 border-radius:30px;
-font-size:16px;
+font-size:15px;
 transition:.3s;
 
 }
@@ -116,6 +114,7 @@ transition:.3s;
 transform:scale(1.05);
 
 }
+
 
 </style>
 
@@ -138,20 +137,15 @@ src="convite.png">
 
 
 
-<div class="botoes" id="botoes">
-
-<a class="botao" target="_blank"
+<a 
+class="botao"
+id="botaoLocal"
+target="_blank"
 href="https://www.google.com/maps/place/Paroquia+Menino+Jesus+de+Praga+e+Santa+Ifigenia+-+Diocese+de+Franca/@-20.5457374,-47.4117848">
-📍 Como chegar
+
+📍 Local da cerimônia
+
 </a>
-
-
-<a class="botao" target="_blank"
-href="https://noivos.casar.com/laiane-e-leonardo-2026-11-07?utm_source=parceiros&utm_campaign=assessoria-vip&utm_medium=casais#/presentes">
-🎁 Lista de presentes
-</a>
-
-</div>
 
 
 
@@ -159,6 +153,7 @@ href="https://noivos.casar.com/laiane-e-leonardo-2026-11-07?utm_source=parceiros
 
 
 function abrirConvite(){
+
 
 document.getElementById("envelope").style.display="none";
 
@@ -170,7 +165,7 @@ convite.style.display="block";
 convite.classList.add("fade");
 
 
-document.getElementById("botoes").style.display="flex";
+document.getElementById("botaoLocal").style.display="block";
 
 
 }
@@ -182,4 +177,3 @@ document.getElementById("botoes").style.display="flex";
 </body>
 
 </html>
-```
