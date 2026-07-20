@@ -24,7 +24,6 @@
 
 <meta property="og:type" content="website">
 
-
 <style>
 
 *{
@@ -32,7 +31,6 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
-
 
 body{
 
@@ -47,7 +45,6 @@ overflow:auto;
 
 }
 
-
 #envelope{
 
 width:340px;
@@ -56,7 +53,6 @@ animation:flutuar 3s infinite ease-in-out;
 transition:.8s;
 
 }
-
 
 @keyframes flutuar{
 
@@ -70,8 +66,6 @@ transform:translateY(-12px);
 
 }
 
-
-
 #convite{
 
 display:none;
@@ -84,15 +78,11 @@ border-radius:10px;
 
 }
 
-
-
 .fade{
 
 animation:abrir 1.2s ease;
 
 }
-
-
 
 @keyframes abrir{
 
@@ -112,8 +102,6 @@ transform:scale(1);
 
 }
 
-
-
 .botao{
 
 display:none;
@@ -128,34 +116,30 @@ transition:.3s;
 
 }
 
-
 .botao:hover{
 
 transform:scale(1.05);
 
 }
 
+.botao + .botao{
+margin-top:12px;
+}
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <img
 id="envelope"
 src="envelope.png"
 onclick="abrirConvite()">
 
-
-
 <img
 id="convite"
 src="convite.png">
-
-
 
 <a
 class="botao"
@@ -167,6 +151,15 @@ href="https://www.google.com/maps/dir//Paroquia+Menino+Jesus+de+Praga+e+Santa+If
 
 </a>
 
+<a
+class="botao"
+id="botaoSite"
+target="_blank"
+href="https://noivos.casar.com/laiane-e-leonardo-2026-11-07">
+
+💖 Site dos Noivos
+
+</a>
 
 <script>
 
@@ -174,22 +167,18 @@ function abrirConvite(){
 
 document.getElementById("envelope").style.display="none";
 
-
 let convite=document.getElementById("convite");
 
 convite.style.display="block";
 
 convite.classList.add("fade");
 
-
 document.getElementById("botaoLocal").style.display="block";
-
+document.getElementById("botaoSite").style.display="block";
 
 }
 
 </script>
 
-
 </body>
-
 </html>
